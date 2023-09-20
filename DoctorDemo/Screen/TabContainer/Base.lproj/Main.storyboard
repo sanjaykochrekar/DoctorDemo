@@ -255,7 +255,6 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <constraints>
                                     <constraint firstItem="aEY-3M-H3p" firstAttribute="leading" secondItem="Qva-wl-Kie" secondAttribute="trailing" id="ANv-aO-Die"/>
                                     <constraint firstAttribute="bottom" secondItem="Obt-qS-M7i" secondAttribute="bottom" id="Bi3-uS-UTZ"/>
@@ -372,9 +371,6 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tintColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

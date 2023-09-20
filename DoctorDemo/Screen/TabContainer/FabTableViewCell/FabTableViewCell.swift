@@ -15,18 +15,12 @@ class FabTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
 }
 
 extension FabTableViewCell: DDTableViewCell {
+    
     func populate(_ data: DDTableViewCellDataModel) {
         if let data = data as? DDFabCellDataModel {
             iconUIImage.image = UIImage(name: data.image)

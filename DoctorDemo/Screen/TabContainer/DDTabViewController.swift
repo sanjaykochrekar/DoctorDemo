@@ -8,6 +8,7 @@
 import UIKit
 
 class DDTabViewController: UIViewController {
+    
     var selectedTab: Int = 0
     var fabData: [DDFabCellDataModel] = [
         .init(image: .pencil, title: "Create a post", description: "Share your thoughts with the community"),
@@ -16,8 +17,6 @@ class DDTabViewController: UIViewController {
         .init(image: .event, title: "Organise an Event", description: "Start a meet with people to share your joys")
     ]
     
-    
-    @IBOutlet weak var fabOptionUITableView: UITableView!
     
     @IBOutlet weak var feedUIImageView: UIImageView!
     @IBOutlet weak var feedUILabel: UILabel!
@@ -36,83 +35,30 @@ class DDTabViewController: UIViewController {
     @IBOutlet weak var tabContainerUIView: UIView!
     
     @IBOutlet weak var backdropUIView: UIView!
+    
+    @IBOutlet weak var fabOptionUITableView: UITableView!
     @IBOutlet weak var tableViewHeightConstraint: NSLayoutConstraint!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        fabOptionUITableView.register(UINib(nibName: "FabTableViewCell", bundle: nil), forCellReuseIdentifier: "FabTableViewCell")
-        let gesture = UITapGestureRecognizer(target: self, action:  #selector (self.bacdropClick(_:)))
-        backdropUIView.addGestureRecognizer(gesture)
-        DispatchQueue.main.async { [weak self] in
-            self?.switchController(0)
-        }
-        self.selectTab(0)
+        initialSetUp()
     }
     
     
-    
-    @objc func bacdropClick(_ sender:UITapGestureRecognizer){
-      toggleFab()
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.viewWillLayoutSubviews()
     }
-
+    
+    
     override func viewWillLayoutSubviews() {
         super.updateViewConstraints()
         self.tableViewHeightConstraint.constant = self.fabOptionUITableView.contentSize.height
     }
-
     
-    func animateMovement() {
-        let animation = CASpringAnimation(keyPath: "position")
-        animation.fromValue = CGPoint(x: fabOptionUITableView.layer.frame.origin.x + fabOptionUITableView.frame.width / 2, y: fabOptionUITableView.layer.frame.origin.y + fabOptionUITableView.frame.height + 48)
-        animation.toValue = CGPoint(x: fabOptionUITableView.layer.frame.origin.x + fabOptionUITableView.frame.width / 2, y: fabOptionUITableView.layer.frame.origin.y + fabOptionUITableView.frame.height / 2)
-        animation.duration = 2
-        animation.fillMode = .forwards
-        animation.isRemovedOnCompletion = false
-        animation.beginTime = CACurrentMediaTime()
-        
-        let jump = CASpringAnimation(keyPath: "transform.scale")
-        jump.damping = 1500
-        jump.mass = 10
-        jump.initialVelocity = 10
-        jump.stiffness = 1500.0
-        
-        jump.fromValue = 0
-        jump.toValue = 1
-        jump.isRemovedOnCompletion = false
-        jump.duration = jump.settlingDuration + 1
-        jump.fillMode = .forwards
-        
-        fabOptionUITableView.layer.add(jump, forKey: nil)
-        fabOptionUITableView.layer.add(animation, forKey: nil)
-    }
     
-    func animateMovementReverse() {
-        let animation = CASpringAnimation(keyPath: "position")
-        animation.fromValue =  CGPoint(x: fabOptionUITableView.layer.frame.origin.x + fabOptionUITableView.frame.width / 2, y: fabOptionUITableView.layer.frame.origin.y + fabOptionUITableView.frame.height / 2)
-        animation.toValue = CGPoint(x: fabOptionUITableView.layer.frame.origin.x + fabOptionUITableView.frame.width / 2, y: fabOptionUITableView.layer.frame.origin.y + fabOptionUITableView.frame.height + 48)
-        animation.duration = 2
-        animation.fillMode = .forwards
-        animation.isRemovedOnCompletion = false
-        animation.beginTime = CACurrentMediaTime()
-        
-        let jump = CASpringAnimation(keyPath: "transform.scale")
-        jump.damping = 1500
-        jump.mass = 10
-        jump.initialVelocity = 10
-        jump.stiffness = 1500.0
-        
-        jump.fromValue = 1
-        jump.toValue = 0
-        jump.isRemovedOnCompletion = false
-        jump.duration = jump.settlingDuration + 1
-        jump.fillMode = .forwards
-        
-        fabOptionUITableView.layer.add(jump, forKey: nil)
-        fabOptionUITableView.layer.add(animation, forKey: nil)
-    }
-    
-
     @IBAction func onTabClick(_ sender: UIButton) {
         
         if sender.tag == selectedTab {
@@ -135,6 +81,73 @@ class DDTabViewController: UIViewController {
     }
     
     
+    @objc func bacdropClick(_ sender:UITapGestureRecognizer){
+      toggleFab()
+    }
+    
+    
+    private func initialSetUp() {
+        DispatchQueue.main.async { [weak self] in
+            self?.switchController(0)
+        }
+        self.selectTab(0)
+        
+        fabOptionUITableView.register(UINib(nibName: "FabTableViewCell", bundle: nil), forCellReuseIdentifier: "FabTableViewCell")
+        let gesture = UITapGestureRecognizer(target: self, action:  #selector (self.bacdropClick(_:)))
+        backdropUIView.addGestureRecognizer(gesture)
+    }
+
+    
+    private func animateMovement() {
+        let positionAnimation = CASpringAnimation(keyPath: "position")
+        positionAnimation.fromValue = CGPoint(x: fabOptionUITableView.layer.frame.origin.x + fabOptionUITableView.frame.width / 2, y: fabOptionUITableView.layer.frame.origin.y + fabOptionUITableView.frame.height + 48)
+        positionAnimation.toValue = CGPoint(x: fabOptionUITableView.layer.frame.origin.x + fabOptionUITableView.frame.width / 2, y: fabOptionUITableView.layer.frame.origin.y + fabOptionUITableView.frame.height / 2)
+        positionAnimation.duration = 2
+        positionAnimation.fillMode = .forwards
+        positionAnimation.isRemovedOnCompletion = false
+        positionAnimation.beginTime = CACurrentMediaTime()
+        
+        let scaleAnimation = CASpringAnimation(keyPath: "transform.scale")
+        scaleAnimation.damping = 1500
+        scaleAnimation.mass = 10
+        scaleAnimation.initialVelocity = 1
+        scaleAnimation.stiffness = 1500.0
+        scaleAnimation.fromValue = 0
+        scaleAnimation.toValue = 1
+        scaleAnimation.isRemovedOnCompletion = false
+        scaleAnimation.duration = scaleAnimation.settlingDuration + 1
+        scaleAnimation.fillMode = .forwards
+        
+        fabOptionUITableView.layer.add(scaleAnimation, forKey: nil)
+        fabOptionUITableView.layer.add(positionAnimation, forKey: nil)
+    }
+    
+    
+    private func animateMovementReverse() {
+        let positionAnimation = CASpringAnimation(keyPath: "position")
+        positionAnimation.fromValue =  CGPoint(x: fabOptionUITableView.layer.frame.origin.x + fabOptionUITableView.frame.width / 2, y: fabOptionUITableView.layer.frame.origin.y + fabOptionUITableView.frame.height / 2)
+        positionAnimation.toValue = CGPoint(x: fabOptionUITableView.layer.frame.origin.x + fabOptionUITableView.frame.width / 2, y: fabOptionUITableView.layer.frame.origin.y + fabOptionUITableView.frame.height + 48)
+        positionAnimation.duration = 2
+        positionAnimation.fillMode = .forwards
+        positionAnimation.isRemovedOnCompletion = false
+        positionAnimation.beginTime = CACurrentMediaTime()
+        
+        let scaleAnimation = CASpringAnimation(keyPath: "transform.scale")
+        scaleAnimation.damping = 1500
+        scaleAnimation.mass = 10
+        scaleAnimation.initialVelocity = 10
+        scaleAnimation.stiffness = 1500.0
+        scaleAnimation.fromValue = 1
+        scaleAnimation.toValue = 0
+        scaleAnimation.isRemovedOnCompletion = false
+        scaleAnimation.duration = scaleAnimation.settlingDuration + 1
+        scaleAnimation.fillMode = .forwards
+        
+        fabOptionUITableView.layer.add(scaleAnimation, forKey: nil)
+        fabOptionUITableView.layer.add(positionAnimation, forKey: nil)
+    }
+    
+    
     private func toggleFab() {
         if backdropUIView.isHidden {
             fabOptionUITableView.isHidden = false
@@ -146,7 +159,7 @@ class DDTabViewController: UIViewController {
             self.backdropUIView.isHidden = !self.backdropUIView.isHidden
         })
         
-        UIView.transition(with: fabUIImage, duration: 0.4, options: .curveEaseOut, animations: {
+        UIView.transition(with: fabUIImage, duration: 0.4, options: .curveEaseInOut, animations: {
             self.fabUIImage.image = UIImage(name: self.backdropUIView.isHidden ? .fab: .close)
         })
     }
@@ -229,9 +242,11 @@ class DDTabViewController: UIViewController {
 
 
 extension DDTabViewController: UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         fabData.count
     }
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellData = fabData[indexPath.row]
@@ -239,9 +254,29 @@ extension DDTabViewController: UITableViewDataSource {
         cell?.populate(cellData)
         return cell as? UITableViewCell ?? UITableViewCell()
     }
+    
 }
 
 extension DDTabViewController: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        toggleFab()
+        handleFabAction(indexPath)
+    }
+    
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        self.viewWillLayoutSubviews()
+    }
+    
+    
+    private func handleFabAction(_ indexPath: IndexPath) {
+        let data = fabData[indexPath.row]
+        let alert = UIAlertController(title: data.title, message: data.description, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
     
 }
 
