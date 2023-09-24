@@ -7,8 +7,13 @@
 
 import UIKit
 
-class DDSeeMoreTextCVCell: UICollectionViewCell {
+class DDSeeMoreTextCVCell: UICollectionViewCell, DDListViewCell {
+    
+    
     @IBOutlet weak var textUILabel: UILabel!
+    
+    var delegate: DDListViewDelegate?
+    var indexPath: IndexPath?
     
     let msg = "My husband has his 3 days transplant assessment in Newcastle next month, strange mix of emotions. For those that have been through this how long did it take following assessment was it until you were t... See More"
     
@@ -16,9 +21,13 @@ class DDSeeMoreTextCVCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        setText(text: msg)
+       
     }
     
+    func populate(_ data: DDListViewCellDataModel, indexPath: IndexPath? = nil) {
+        setText(text: msg)
+        self.indexPath = indexPath
+    }
     
     private func setText(text: String) {
         textUILabel.text = text
@@ -44,7 +53,9 @@ class DDSeeMoreTextCVCell: UICollectionViewCell {
             UIView.animate(withDuration: 0.5) { [weak self] in
                 self?.setText(text: self?.msg2 ?? "")
             }
-            print("Tapped terms")
+            if let indexPath {
+                delegate?.reloadCellAtIndexPath(indexPath: indexPath)
+            }
         } else if gesture.didTapAttributedTextInLabel(label: textUILabel, inRange: privacyRange) {
             print("Tapped privacy")
         } else {

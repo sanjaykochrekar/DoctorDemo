@@ -9,11 +9,23 @@ import Foundation
 
 
 protocol DDListViewCell {
-    func populate(_ data: DDListViewCellDataModel)
-    func populate(_ data: DDListViewCellDataModel, indexPath: IndexPath)
+    func populate(_ data: DDListViewCellDataModel, indexPath: IndexPath?)
 }
+
+extension DDListViewCell {
+}
+
+
 
 
 protocol DDListViewCellDataModel {
     var identifier: String { get set }
+}
+
+protocol DDListViewDelegate {
+    func reloadCellAtIndexPath(indexPath: IndexPath)
+}
+
+extension DDListViewDelegate {
+    func reloadCellAtIndexPath(indexPath: IndexPath) {}
 }

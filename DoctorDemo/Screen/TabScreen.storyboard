@@ -18,40 +18,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Igh-tZ-g2Z">
-                                <rect key="frame" x="0.0" y="59" width="393" height="100"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="dhx-UH-I00">
+                                <rect key="frame" x="0.0" y="59" width="393" height="94"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dhx-UH-I00">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cCK-AX-6eZ">
-                                                <rect key="frame" x="0.0" y="0.0" width="393" height="40"/>
-                                                <color key="backgroundColor" systemColor="systemRedColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="JXn-Xy-GGz"/>
-                                                </constraints>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sD6-9m-2Oa">
-                                                <rect key="frame" x="0.0" y="40" width="393" height="60"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="60" id="jPN-B7-xdx"/>
-                                                </constraints>
-                                            </view>
-                                        </subviews>
-                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cCK-AX-6eZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="40"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="JXn-Xy-GGz"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sD6-9m-2Oa">
+                                        <rect key="frame" x="0.0" y="44" width="393" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="rgd-bM-Ye9"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
-                                <color key="backgroundColor" name="gray"/>
-                                <constraints>
-                                    <constraint firstItem="dhx-UH-I00" firstAttribute="leading" secondItem="Igh-tZ-g2Z" secondAttribute="leading" id="7z2-Ud-SqY"/>
-                                    <constraint firstAttribute="trailing" secondItem="dhx-UH-I00" secondAttribute="trailing" id="HFc-ew-TTD"/>
-                                    <constraint firstAttribute="bottom" secondItem="dhx-UH-I00" secondAttribute="bottom" id="OAh-uc-P2J"/>
-                                    <constraint firstItem="dhx-UH-I00" firstAttribute="top" secondItem="Igh-tZ-g2Z" secondAttribute="top" id="c3P-ag-ING"/>
-                                    <constraint firstAttribute="height" constant="100" id="sFs-2q-gDB"/>
-                                </constraints>
-                            </view>
+                            </stackView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="c2E-42-wAz">
-                                <rect key="frame" x="0.0" y="159" width="393" height="659"/>
+                                <rect key="frame" x="0.0" y="153" width="393" height="665"/>
                                 <color key="backgroundColor" name="dark25"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="EiY-Ju-ev4">
                                     <size key="itemSize" width="128" height="128"/>
@@ -69,17 +56,18 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" name="light"/>
                         <constraints>
-                            <constraint firstItem="Igh-tZ-g2Z" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="Cl0-hG-VjH"/>
                             <constraint firstItem="c2E-42-wAz" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Fyq-bU-GOl"/>
+                            <constraint firstItem="dhx-UH-I00" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="He2-WZ-MRr"/>
                             <constraint firstItem="c2E-42-wAz" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="Q3H-7n-ODP"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Igh-tZ-g2Z" secondAttribute="trailing" id="QBl-Tn-UOs"/>
-                            <constraint firstItem="Igh-tZ-g2Z" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Uc2-oQ-qO7"/>
-                            <constraint firstItem="c2E-42-wAz" firstAttribute="top" secondItem="Igh-tZ-g2Z" secondAttribute="bottom" id="kIQ-g3-wYF"/>
+                            <constraint firstItem="dhx-UH-I00" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="WGe-09-gXx"/>
+                            <constraint firstItem="c2E-42-wAz" firstAttribute="top" secondItem="dhx-UH-I00" secondAttribute="bottom" id="aKi-j0-44I"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="c2E-42-wAz" secondAttribute="trailing" id="l7d-g4-Z0K"/>
+                            <constraint firstItem="dhx-UH-I00" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="pEM-r3-Shm"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="feedUICollectionView" destination="c2E-42-wAz" id="urv-VU-J2m"/>
+                        <outlet property="headerViewHeightConstraint" destination="JXn-Xy-GGz" id="aXw-Je-CSl"/>
                         <outlet property="profileUIView" destination="cCK-AX-6eZ" id="vpV-OI-zuM"/>
                     </connections>
                 </viewController>
@@ -135,10 +123,7 @@
     </scenes>
     <resources>
         <namedColor name="dark25">
-            <color red="0.0" green="0.0" blue="0.0" alpha="0.050000000000000003" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="gray">
-            <color red="0.6470588235294118" green="0.69411764705882351" blue="0.76078431372549016" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.0" blue="0.0" alpha="0.05000000074505806" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="light">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -147,16 +132,16 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray2Color">
-            <color red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
-            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -28,4 +28,10 @@ enum DDImageName: String {
     case event
     case poll
     case question
+    
+    case emptyLike
+    case emptyComment
+    case bookmarkEmpty
+    case share
+    
 }

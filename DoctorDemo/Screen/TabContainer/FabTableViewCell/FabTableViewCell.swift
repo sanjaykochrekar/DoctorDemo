@@ -7,21 +7,14 @@
 
 import UIKit
 
-class FabTableViewCell: UITableViewCell {
+class FabTableViewCell: UITableViewCell, DDListViewCell {
     
     @IBOutlet weak var iconUIImage: UIImageView!
     @IBOutlet weak var titleUILabel: UILabel!
     @IBOutlet weak var descriptionUILabel: UILabel!
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
+    var indexPath: IndexPath?
     
-}
-
-extension FabTableViewCell: DDListViewCell {
-    
-    func populate(_ data: DDListViewCellDataModel) {
+    func populate(_ data: DDListViewCellDataModel, indexPath: IndexPath?) {
         if let data = data as? DDFabCellDataModel {
             iconUIImage.image = UIImage(name: data.image)
             titleUILabel.text = data.title
@@ -29,4 +22,10 @@ extension FabTableViewCell: DDListViewCell {
         }
     }
     
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    
 }
+

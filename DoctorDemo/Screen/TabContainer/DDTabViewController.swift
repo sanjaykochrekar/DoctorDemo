@@ -256,7 +256,7 @@ extension DDTabViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellData = fabData[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: cellData.identifier) as? DDListViewCell
-        cell?.populate(cellData)
+        cell?.populate(cellData,indexPath: nil)
         return cell as? UITableViewCell ?? UITableViewCell()
     }
     
