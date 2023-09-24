@@ -12,6 +12,9 @@
         <array key="Inter-Bold.ttf">
             <string>Inter-Bold</string>
         </array>
+        <array key="Inter-Light.ttf">
+            <string>Inter-Light</string>
+        </array>
         <array key="Inter-Regular.ttf">
             <string>Inter-Regular</string>
         </array>
@@ -57,7 +60,7 @@
                                 <rect key="frame" x="50" y="10.666666666666664" width="423" height="35"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bLd-FW-IVs">
-                                        <rect key="frame" x="0.0" y="0.0" width="223.33333333333334" height="17"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="222.33333333333334" height="17"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username1275" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AD0-jv-EoZ">
                                                 <rect key="frame" x="0.0" y="0.0" width="101.66666666666667" height="17"/>
@@ -65,9 +68,9 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="created an event" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SL8-OJ-Mrz">
-                                                <rect key="frame" x="111.66666666666666" y="0.0" width="111.66666666666666" height="17"/>
-                                                <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="14"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="created an event" textAlignment="natural" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SL8-OJ-Mrz">
+                                                <rect key="frame" x="111.66666666666666" y="0.0" width="110.66666666666666" height="17"/>
+                                                <fontDescription key="fontDescription" name="Inter-Light" family="Inter" pointSize="14"/>
                                                 <color key="textColor" name="gray"/>
                                                 <nil key="highlightedColor"/>
                                             </label>

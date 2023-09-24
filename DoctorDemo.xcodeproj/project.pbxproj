@@ -38,7 +38,7 @@
 		E3F2E2BE2AB97AB000C92B58 /* DDServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F2E2BD2AB97AB000C92B58 /* DDServiceViewController.swift */; };
 		E3F2E2C22ABA0A6600C92B58 /* FabTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F2E2C02ABA0A6600C92B58 /* FabTableViewCell.swift */; };
 		E3F2E2C32ABA0A6600C92B58 /* FabTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3F2E2C12ABA0A6600C92B58 /* FabTableViewCell.xib */; };
-		E3F2E2C72ABA0AF300C92B58 /* DDTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F2E2C62ABA0AF300C92B58 /* DDTableViewCell.swift */; };
+		E3F2E2C72ABA0AF300C92B58 /* DDListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F2E2C62ABA0AF300C92B58 /* DDListViewCell.swift */; };
 		E3F2E2C92ABA0B7D00C92B58 /* DDFabCellDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F2E2C82ABA0B7D00C92B58 /* DDFabCellDataModel.swift */; };
 		E3F2E2CB2ABA9C3000C92B58 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F2E2CA2ABA9C3000C92B58 /* UIView+Extension.swift */; };
 		E3F64F262ABF269600ADCB88 /* DDFeedPostHeaderCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F64F242ABF269600ADCB88 /* DDFeedPostHeaderCVCell.swift */; };
@@ -79,7 +79,7 @@
 		E3F2E2BD2AB97AB000C92B58 /* DDServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDServiceViewController.swift; sourceTree = "<group>"; };
 		E3F2E2C02ABA0A6600C92B58 /* FabTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FabTableViewCell.swift; sourceTree = "<group>"; };
 		E3F2E2C12ABA0A6600C92B58 /* FabTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FabTableViewCell.xib; sourceTree = "<group>"; };
-		E3F2E2C62ABA0AF300C92B58 /* DDTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDTableViewCell.swift; sourceTree = "<group>"; };
+		E3F2E2C62ABA0AF300C92B58 /* DDListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDListViewCell.swift; sourceTree = "<group>"; };
 		E3F2E2C82ABA0B7D00C92B58 /* DDFabCellDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDFabCellDataModel.swift; sourceTree = "<group>"; };
 		E3F2E2CA2ABA9C3000C92B58 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		E3F64F242ABF269600ADCB88 /* DDFeedPostHeaderCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDFeedPostHeaderCVCell.swift; sourceTree = "<group>"; };
@@ -262,7 +262,7 @@
 			isa = PBXGroup;
 			children = (
 				E3D465872ABFE80900828B72 /* Extension */,
-				E3F2E2C62ABA0AF300C92B58 /* DDTableViewCell.swift */,
+				E3F2E2C62ABA0AF300C92B58 /* DDListViewCell.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -371,7 +371,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3F2E2B82AB97A2600C92B58 /* DDLibraryViewController.swift in Sources */,
-				E3F2E2C72ABA0AF300C92B58 /* DDTableViewCell.swift in Sources */,
+				E3F2E2C72ABA0AF300C92B58 /* DDListViewCell.swift in Sources */,
 				E3F2E2CB2ABA9C3000C92B58 /* UIView+Extension.swift in Sources */,
 				E37DD6662AB8B8330054F2F9 /* DDTabViewController.swift in Sources */,
 				E3F2E2C22ABA0A6600C92B58 /* FabTableViewCell.swift in Sources */,

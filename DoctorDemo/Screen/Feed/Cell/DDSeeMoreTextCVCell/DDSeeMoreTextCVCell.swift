@@ -16,7 +16,7 @@ class DDSeeMoreTextCVCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-//        setText(text: msg)
+        setText(text: msg)
     }
     
     

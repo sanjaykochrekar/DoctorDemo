@@ -6,7 +6,7 @@
 //
 
 
-struct DDFabCellDataModel: DDTableViewCellDataModel {
+struct DDFabCellDataModel: DDListViewCellDataModel {
     
     var identifier: String = "FabTableViewCell"
     

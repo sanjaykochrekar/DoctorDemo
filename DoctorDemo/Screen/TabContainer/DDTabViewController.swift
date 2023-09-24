@@ -142,7 +142,7 @@ class DDTabViewController: UIViewController {
         scaleAnimation.isRemovedOnCompletion = false
         scaleAnimation.duration = scaleAnimation.settlingDuration + 1
         scaleAnimation.fillMode = .forwards
-        
+        scaleAnimation.delegate = self
         fabOptionUITableView.layer.add(scaleAnimation, forKey: nil)
         fabOptionUITableView.layer.add(positionAnimation, forKey: nil)
     }
@@ -254,7 +254,7 @@ extension DDTabViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellData = fabData[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellData.identifier) as? DDTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellData.identifier) as? DDListViewCell
         cell?.populate(cellData)
         return cell as? UITableViewCell ?? UITableViewCell()
     }
@@ -284,3 +284,11 @@ extension DDTabViewController: UITableViewDelegate {
     
 }
 
+
+extension DDTabViewController: CAAnimationDelegate {
+    func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
+        if flag && backdropUIView.isHidden {
+            fabOptionUITableView.isHidden = !fabOptionUITableView.isHidden
+        }
+    }
+}

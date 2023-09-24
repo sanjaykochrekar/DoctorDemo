@@ -19,9 +19,9 @@ class FabTableViewCell: UITableViewCell {
     
 }
 
-extension FabTableViewCell: DDTableViewCell {
+extension FabTableViewCell: DDListViewCell {
     
-    func populate(_ data: DDTableViewCellDataModel) {
+    func populate(_ data: DDListViewCellDataModel) {
         if let data = data as? DDFabCellDataModel {
             iconUIImage.image = UIImage(name: data.image)
             titleUILabel.text = data.title
