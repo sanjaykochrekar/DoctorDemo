@@ -127,8 +127,9 @@ class DDTabViewController: UIViewController {
         let positionAnimation = CASpringAnimation(keyPath: "position")
         positionAnimation.fromValue =  CGPoint(x: fabOptionUITableView.layer.frame.origin.x + fabOptionUITableView.frame.width / 2, y: fabOptionUITableView.layer.frame.origin.y + fabOptionUITableView.frame.height / 2)
         positionAnimation.toValue = CGPoint(x: fabOptionUITableView.layer.frame.origin.x + fabOptionUITableView.frame.width / 2, y: fabOptionUITableView.layer.frame.origin.y + fabOptionUITableView.frame.height + 48)
-        positionAnimation.duration = 2
+        positionAnimation.duration = 0
         positionAnimation.fillMode = .forwards
+        positionAnimation.delegate = self
         positionAnimation.isRemovedOnCompletion = false
         positionAnimation.beginTime = CACurrentMediaTime()
         
@@ -288,7 +289,7 @@ extension DDTabViewController: UITableViewDelegate {
 extension DDTabViewController: CAAnimationDelegate {
     func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
         if flag && backdropUIView.isHidden {
-            fabOptionUITableView.isHidden = !fabOptionUITableView.isHidden
+            fabOptionUITableView.isHidden = true
         }
     }
 }
