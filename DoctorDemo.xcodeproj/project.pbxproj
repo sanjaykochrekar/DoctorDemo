@@ -38,6 +38,8 @@
 		E3F2E2C72ABA0AF300C92B58 /* DDTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F2E2C62ABA0AF300C92B58 /* DDTableViewCell.swift */; };
 		E3F2E2C92ABA0B7D00C92B58 /* DDFabCellDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F2E2C82ABA0B7D00C92B58 /* DDFabCellDataModel.swift */; };
 		E3F2E2CB2ABA9C3000C92B58 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F2E2CA2ABA9C3000C92B58 /* UIView+Extension.swift */; };
+		E3F64F262ABF269600ADCB88 /* DDFeedPostHeaderCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F64F242ABF269600ADCB88 /* DDFeedPostHeaderCVCell.swift */; };
+		E3F64F272ABF269600ADCB88 /* DDFeedPostHeaderCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3F64F252ABF269600ADCB88 /* DDFeedPostHeaderCVCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +76,8 @@
 		E3F2E2C62ABA0AF300C92B58 /* DDTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDTableViewCell.swift; sourceTree = "<group>"; };
 		E3F2E2C82ABA0B7D00C92B58 /* DDFabCellDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDFabCellDataModel.swift; sourceTree = "<group>"; };
 		E3F2E2CA2ABA9C3000C92B58 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		E3F64F242ABF269600ADCB88 /* DDFeedPostHeaderCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDFeedPostHeaderCVCell.swift; sourceTree = "<group>"; };
+		E3F64F252ABF269600ADCB88 /* DDFeedPostHeaderCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DDFeedPostHeaderCVCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +184,7 @@
 		E3F2E2B32AB979AB00C92B58 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
+				E3F64F222ABF265800ADCB88 /* Cell */,
 				E3F2E2B42AB979C400C92B58 /* DDFeedViewController.swift */,
 			);
 			path = Feed;
@@ -236,6 +241,23 @@
 				E3F2E2CA2ABA9C3000C92B58 /* UIView+Extension.swift */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		E3F64F222ABF265800ADCB88 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E3F64F232ABF265E00ADCB88 /* DDFeedPostHeaderCell */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		E3F64F232ABF265E00ADCB88 /* DDFeedPostHeaderCell */ = {
+			isa = PBXGroup;
+			children = (
+				E3F64F242ABF269600ADCB88 /* DDFeedPostHeaderCVCell.swift */,
+				E3F64F252ABF269600ADCB88 /* DDFeedPostHeaderCVCell.xib */,
+			);
+			path = DDFeedPostHeaderCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,6 +333,7 @@
 				E3F2E2A72AB8BFAB00C92B58 /* Theme.xcassets in Resources */,
 				E3F2E2A12AB8BEB300C92B58 /* Inter-Light.ttf in Resources */,
 				E3F2E29B2AB8BEB300C92B58 /* Inter-ExtraBold.ttf in Resources */,
+				E3F64F272ABF269600ADCB88 /* DDFeedPostHeaderCVCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +351,7 @@
 				E3F2E2C22ABA0A6600C92B58 /* FabTableViewCell.swift in Sources */,
 				E3F2E2C92ABA0B7D00C92B58 /* DDFabCellDataModel.swift in Sources */,
 				E3F2E2BE2AB97AB000C92B58 /* DDServiceViewController.swift in Sources */,
+				E3F64F262ABF269600ADCB88 /* DDFeedPostHeaderCVCell.swift in Sources */,
 				E3F2E2B52AB979C400C92B58 /* DDFeedViewController.swift in Sources */,
 				E3F2E2AB2AB8C01000C92B58 /* DDColor.swift in Sources */,
 				E3F2E2BB2AB97A7200C92B58 /* DDMessageViewController.swift in Sources */,
@@ -488,7 +512,6 @@
 				INFOPLIST_FILE = DoctorDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -517,7 +540,6 @@
 				INFOPLIST_FILE = DoctorDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;

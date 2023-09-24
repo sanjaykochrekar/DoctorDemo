@@ -210,6 +210,7 @@ class DDTabViewController: UIViewController {
         if tag == 0 {
             
             let vc = storyboard.instantiateViewController(identifier: "DDFeedViewController")
+            addChild(vc)
             tabContainerUIView.addSubview(vc.view)
             vc.view.frame = tabContainerUIView.bounds
             vc.didMove(toParent: self)
@@ -217,6 +218,7 @@ class DDTabViewController: UIViewController {
         } else if tag == 1 {
             
             let vc = storyboard.instantiateViewController(identifier: "DDLibraryViewController")
+            addChild(vc)
             tabContainerUIView.addSubview(vc.view)
             vc.view.frame = tabContainerUIView.bounds
             vc.didMove(toParent: self)
@@ -224,6 +226,7 @@ class DDTabViewController: UIViewController {
         } else if tag == 3 {
             
             let vc = storyboard.instantiateViewController(identifier: "DDMessageViewController")
+            addChild(vc)
             tabContainerUIView.addSubview(vc.view)
             vc.view.frame = tabContainerUIView.bounds
             vc.didMove(toParent: self)
@@ -231,6 +234,7 @@ class DDTabViewController: UIViewController {
         } else if tag == 4 {
             
             let vc = storyboard.instantiateViewController(identifier: "DDServiceViewController")
+            addChild(vc)
             tabContainerUIView.addSubview(vc.view)
             vc.view.frame = tabContainerUIView.bounds
             vc.didMove(toParent: self)
