@@ -11,4 +11,5 @@ enum DDColor: String {
     case green
     case gray
     case green25
+    case dark75
 }

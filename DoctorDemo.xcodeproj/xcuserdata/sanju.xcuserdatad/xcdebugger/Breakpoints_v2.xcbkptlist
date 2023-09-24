@@ -23,16 +23,190 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "435894E3-6CC1-49DD-86B5-FC0271C6F5C4"
+            uuid = "BEAC728D-7092-4413-BEDD-9D3BD7B55015"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "DoctorDemo/Screen/Feed/DDFeedViewController.swift"
+            filePath = "DoctorDemo/Screen/TabContainer/DDTabViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
-            landmarkName = "collectionView(_:cellForItemAt:)"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "bacdropClick(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BEAC728D-7092-4413-BEDD-9D3BD7B55015 - 6232b6e4e50bd259"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DoctorDemo.DDTabViewController.bacdropClick(__C.UITapGestureRecognizer) -&gt; ()"
+                  moduleName = "DoctorDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sanju/Project/iOS/DoctorDemo/DoctorDemo/Screen/TabContainer/DDTabViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "92"
+                  endingLineNumber = "92"
+                  offsetFromSymbolStart = "204">
+               </Location>
+               <Location
+                  uuid = "BEAC728D-7092-4413-BEDD-9D3BD7B55015 - 5357f8111a60a1f4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DoctorDemo.DDTabViewController.initialSetUp() -&gt; ()"
+                  moduleName = "DoctorDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sanju/Project/iOS/DoctorDemo/DoctorDemo/Screen/TabContainer/DDTabViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "90"
+                  endingLineNumber = "90"
+                  offsetFromSymbolStart = "188">
+               </Location>
+               <Location
+                  uuid = "BEAC728D-7092-4413-BEDD-9D3BD7B55015 - 6232b6e4e50bcdfe"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DoctorDemo.DDTabViewController.bacdropClick(__C.UITapGestureRecognizer) -&gt; ()"
+                  moduleName = "DoctorDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sanju/Project/iOS/DoctorDemo/DoctorDemo/Screen/TabContainer/DDTabViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "89"
+                  endingLineNumber = "89"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C9EFC2E8-F532-4FE4-864A-3A6404BCDC36"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DoctorDemo/Screen/TabContainer/DDTabViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "168"
+            endingLineNumber = "168"
+            landmarkName = "toggleFab()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C9EFC2E8-F532-4FE4-864A-3A6404BCDC36 - 7c5d313f03701f38"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DoctorDemo.DDTabViewController.deselectTab(Swift.Int) -&gt; ()"
+                  moduleName = "DoctorDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sanju/Project/iOS/DoctorDemo/DoctorDemo/Screen/TabContainer/DDTabViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "169"
+                  endingLineNumber = "169"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "C9EFC2E8-F532-4FE4-864A-3A6404BCDC36 - 2cdf8f8ce316c8b0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DoctorDemo.DDTabViewController.toggleFab() -&gt; ()"
+                  moduleName = "DoctorDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sanju/Project/iOS/DoctorDemo/DoctorDemo/Screen/TabContainer/DDTabViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "167"
+                  endingLineNumber = "167"
+                  offsetFromSymbolStart = "444">
+               </Location>
+               <Location
+                  uuid = "C9EFC2E8-F532-4FE4-864A-3A6404BCDC36 - 2cdf8f8ce316cb51"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DoctorDemo.DDTabViewController.toggleFab() -&gt; ()"
+                  moduleName = "DoctorDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sanju/Project/iOS/DoctorDemo/DoctorDemo/Screen/TabContainer/DDTabViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "168"
+                  endingLineNumber = "168"
+                  offsetFromSymbolStart = "444">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E5AA2242-1F2B-4084-86BC-E78F8674B38A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DoctorDemo/Screen/TabContainer/DDTabViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "fabClicked(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E5AA2242-1F2B-4084-86BC-E78F8674B38A - 6232b6e4e50bcd72"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DoctorDemo.DDTabViewController.bacdropClick(__C.UITapGestureRecognizer) -&gt; ()"
+                  moduleName = "DoctorDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sanju/Project/iOS/DoctorDemo/DoctorDemo/Screen/TabContainer/DDTabViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  uuid = "E5AA2242-1F2B-4084-86BC-E78F8674B38A - ef13d8d47ddfa894"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DoctorDemo.DDTabViewController.fabClicked(Any) -&gt; ()"
+                  moduleName = "DoctorDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sanju/Project/iOS/DoctorDemo/DoctorDemo/Screen/TabContainer/DDTabViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FD3AAD97-6870-46B9-AED6-E920BD8539E8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DoctorDemo/Screen/TabContainer/DDTabViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "164"
+            endingLineNumber = "164"
+            landmarkName = "toggleFab()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

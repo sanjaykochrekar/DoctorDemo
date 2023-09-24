@@ -13,6 +13,9 @@
 		E37DD6692AB8B8330054F2F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E37DD6672AB8B8330054F2F9 /* Main.storyboard */; };
 		E37DD66B2AB8B8340054F2F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E37DD66A2AB8B8340054F2F9 /* Assets.xcassets */; };
 		E37DD66E2AB8B8340054F2F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E37DD66C2AB8B8340054F2F9 /* LaunchScreen.storyboard */; };
+		E3D465892ABFE82500828B72 /* UITapGestureRecognizer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D465882ABFE82500828B72 /* UITapGestureRecognizer+Extension.swift */; };
+		E3D4658D2ABFE96900828B72 /* DDSeeMoreTextCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D4658B2ABFE96800828B72 /* DDSeeMoreTextCVCell.swift */; };
+		E3D4658E2ABFE96900828B72 /* DDSeeMoreTextCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3D4658C2ABFE96800828B72 /* DDSeeMoreTextCVCell.xib */; };
 		E3F2E2992AB8BEB300C92B58 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F2E28F2AB8BEB200C92B58 /* UIFont+Extension.swift */; };
 		E3F2E29A2AB8BEB300C92B58 /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3F2E2902AB8BEB200C92B58 /* Inter-Bold.ttf */; };
 		E3F2E29B2AB8BEB300C92B58 /* Inter-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3F2E2912AB8BEB200C92B58 /* Inter-ExtraBold.ttf */; };
@@ -51,6 +54,9 @@
 		E37DD66A2AB8B8340054F2F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E37DD66D2AB8B8340054F2F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E37DD66F2AB8B8340054F2F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3D465882ABFE82500828B72 /* UITapGestureRecognizer+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITapGestureRecognizer+Extension.swift"; sourceTree = "<group>"; };
+		E3D4658B2ABFE96800828B72 /* DDSeeMoreTextCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDSeeMoreTextCVCell.swift; sourceTree = "<group>"; };
+		E3D4658C2ABFE96800828B72 /* DDSeeMoreTextCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DDSeeMoreTextCVCell.xib; sourceTree = "<group>"; };
 		E3F2E28F2AB8BEB200C92B58 /* UIFont+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 		E3F2E2902AB8BEB200C92B58 /* Inter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.ttf"; sourceTree = "<group>"; };
 		E3F2E2912AB8BEB200C92B58 /* Inter-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraBold.ttf"; sourceTree = "<group>"; };
@@ -120,6 +126,24 @@
 				E37DD66F2AB8B8340054F2F9 /* Info.plist */,
 			);
 			path = DoctorDemo;
+			sourceTree = "<group>";
+		};
+		E3D465872ABFE80900828B72 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E3F2E2CA2ABA9C3000C92B58 /* UIView+Extension.swift */,
+				E3D465882ABFE82500828B72 /* UITapGestureRecognizer+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		E3D4658A2ABFE93300828B72 /* DDSeeMoreTextCVCell */ = {
+			isa = PBXGroup;
+			children = (
+				E3D4658B2ABFE96800828B72 /* DDSeeMoreTextCVCell.swift */,
+				E3D4658C2ABFE96800828B72 /* DDSeeMoreTextCVCell.xib */,
+			);
+			path = DDSeeMoreTextCVCell;
 			sourceTree = "<group>";
 		};
 		E3F2E28E2AB8BE9100C92B58 /* Font */ = {
@@ -237,8 +261,8 @@
 		E3F2E2C52ABA0AC100C92B58 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				E3D465872ABFE80900828B72 /* Extension */,
 				E3F2E2C62ABA0AF300C92B58 /* DDTableViewCell.swift */,
-				E3F2E2CA2ABA9C3000C92B58 /* UIView+Extension.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -246,6 +270,7 @@
 		E3F64F222ABF265800ADCB88 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				E3D4658A2ABFE93300828B72 /* DDSeeMoreTextCVCell */,
 				E3F64F232ABF265E00ADCB88 /* DDFeedPostHeaderCell */,
 			);
 			path = Cell;
@@ -331,6 +356,7 @@
 				E3F2E29F2AB8BEB300C92B58 /* Inter-Thin.ttf in Resources */,
 				E3F2E2A22AB8BEB300C92B58 /* Inter-Medium.ttf in Resources */,
 				E3F2E2A72AB8BFAB00C92B58 /* Theme.xcassets in Resources */,
+				E3D4658E2ABFE96900828B72 /* DDSeeMoreTextCVCell.xib in Resources */,
 				E3F2E2A12AB8BEB300C92B58 /* Inter-Light.ttf in Resources */,
 				E3F2E29B2AB8BEB300C92B58 /* Inter-ExtraBold.ttf in Resources */,
 				E3F64F272ABF269600ADCB88 /* DDFeedPostHeaderCVCell.xib in Resources */,
@@ -353,10 +379,12 @@
 				E3F2E2BE2AB97AB000C92B58 /* DDServiceViewController.swift in Sources */,
 				E3F64F262ABF269600ADCB88 /* DDFeedPostHeaderCVCell.swift in Sources */,
 				E3F2E2B52AB979C400C92B58 /* DDFeedViewController.swift in Sources */,
+				E3D465892ABFE82500828B72 /* UITapGestureRecognizer+Extension.swift in Sources */,
 				E3F2E2AB2AB8C01000C92B58 /* DDColor.swift in Sources */,
 				E3F2E2BB2AB97A7200C92B58 /* DDMessageViewController.swift in Sources */,
 				E3F2E2AD2AB8C17800C92B58 /* DDImageName.swift in Sources */,
 				E3F2E2AF2AB8C1CE00C92B58 /* Image+Extension.swift in Sources */,
+				E3D4658D2ABFE96900828B72 /* DDSeeMoreTextCVCell.swift in Sources */,
 				E37DD6622AB8B8330054F2F9 /* AppDelegate.swift in Sources */,
 				E3F2E2992AB8BEB300C92B58 /* UIFont+Extension.swift in Sources */,
 				E37DD6642AB8B8330054F2F9 /* SceneDelegate.swift in Sources */,

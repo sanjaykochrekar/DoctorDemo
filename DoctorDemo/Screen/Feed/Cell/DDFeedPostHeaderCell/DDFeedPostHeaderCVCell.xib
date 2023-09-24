@@ -73,8 +73,8 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="left" translatesAutoresizingMaskIntoConstraints="NO" id="pAm-SO-XoK">
-                                        <rect key="frame" x="0.0" y="19.000000000000007" width="175.33333333333334" height="16"/>
+                                    <stackView opaque="NO" contentMode="left" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="pAm-SO-XoK">
+                                        <rect key="frame" x="0.0" y="19.000000000000007" width="179.33333333333334" height="16"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RQ4-Ni-EI2">
                                                 <rect key="frame" x="0.0" y="0.0" width="62.333333333333336" height="16"/>
@@ -109,7 +109,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DIAGNOSED RECENTLY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G9S-4c-DWP">
-                                                <rect key="frame" x="62.333333333333329" y="0.0" width="112.99999999999999" height="16"/>
+                                                <rect key="frame" x="66.333333333333343" y="0.0" width="113" height="16"/>
                                                 <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="10"/>
                                                 <color key="textColor" name="green"/>
                                                 <nil key="highlightedColor"/>
