@@ -17,6 +17,8 @@
 		E360A6DD2AC2BAEF009B5E9F /* DDPostTitleCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E360A6DB2AC2BAEF009B5E9F /* DDPostTitleCVCell.xib */; };
 		E360A6E12AC2C007009B5E9F /* DDPostImageCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E360A6DF2AC2C007009B5E9F /* DDPostImageCVCell.swift */; };
 		E360A6E22AC2C007009B5E9F /* DDPostImageCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E360A6E02AC2C007009B5E9F /* DDPostImageCVCell.xib */; };
+		E360A6E62AC2E0CB009B5E9F /* DDArticleCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E360A6E42AC2E0CB009B5E9F /* DDArticleCVCell.swift */; };
+		E360A6E72AC2E0CB009B5E9F /* DDArticleCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E360A6E52AC2E0CB009B5E9F /* DDArticleCVCell.xib */; };
 		E37DD6622AB8B8330054F2F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37DD6612AB8B8330054F2F9 /* AppDelegate.swift */; };
 		E37DD6642AB8B8330054F2F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37DD6632AB8B8330054F2F9 /* SceneDelegate.swift */; };
 		E37DD6662AB8B8330054F2F9 /* DDTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37DD6652AB8B8330054F2F9 /* DDTabViewController.swift */; };
@@ -69,6 +71,8 @@
 		E360A6DB2AC2BAEF009B5E9F /* DDPostTitleCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DDPostTitleCVCell.xib; sourceTree = "<group>"; };
 		E360A6DF2AC2C007009B5E9F /* DDPostImageCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDPostImageCVCell.swift; sourceTree = "<group>"; };
 		E360A6E02AC2C007009B5E9F /* DDPostImageCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DDPostImageCVCell.xib; sourceTree = "<group>"; };
+		E360A6E42AC2E0CB009B5E9F /* DDArticleCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDArticleCVCell.swift; sourceTree = "<group>"; };
+		E360A6E52AC2E0CB009B5E9F /* DDArticleCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DDArticleCVCell.xib; sourceTree = "<group>"; };
 		E37DD65E2AB8B8330054F2F9 /* DoctorDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoctorDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E37DD6612AB8B8330054F2F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E37DD6632AB8B8330054F2F9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -156,6 +160,15 @@
 				E360A6E02AC2C007009B5E9F /* DDPostImageCVCell.xib */,
 			);
 			path = DDPostImageCVCell;
+			sourceTree = "<group>";
+		};
+		E360A6E32AC2E0A8009B5E9F /* DDArticleCVCell */ = {
+			isa = PBXGroup;
+			children = (
+				E360A6E42AC2E0CB009B5E9F /* DDArticleCVCell.swift */,
+				E360A6E52AC2E0CB009B5E9F /* DDArticleCVCell.xib */,
+			);
+			path = DDArticleCVCell;
 			sourceTree = "<group>";
 		};
 		E37DD6552AB8B8330054F2F9 = {
@@ -353,6 +366,7 @@
 		E3F64F222ABF265800ADCB88 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				E360A6E32AC2E0A8009B5E9F /* DDArticleCVCell */,
 				E360A6DE2AC2BFE9009B5E9F /* DDPostImageCVCell */,
 				E360A6D92AC2BAD1009B5E9F /* DDPostTitleCVCell */,
 				E3B4884C2AC0AC2000D14839 /* DDLocationCVCell */,
@@ -447,6 +461,7 @@
 				E35413882AC04228002C757F /* DDPostActionCVCell.xib in Resources */,
 				E3F2E2A72AB8BFAB00C92B58 /* Theme.xcassets in Resources */,
 				E3D4658E2ABFE96900828B72 /* DDSeeMoreTextCVCell.xib in Resources */,
+				E360A6E72AC2E0CB009B5E9F /* DDArticleCVCell.xib in Resources */,
 				E3F2E2A12AB8BEB300C92B58 /* Inter-Light.ttf in Resources */,
 				E3F2E29B2AB8BEB300C92B58 /* Inter-ExtraBold.ttf in Resources */,
 				E3F64F272ABF269600ADCB88 /* DDFeedPostHeaderCVCell.xib in Resources */,
@@ -487,6 +502,7 @@
 				E3F2E2992AB8BEB300C92B58 /* UIFont+Extension.swift in Sources */,
 				E360A6E12AC2C007009B5E9F /* DDPostImageCVCell.swift in Sources */,
 				E37DD6642AB8B8330054F2F9 /* SceneDelegate.swift in Sources */,
+				E360A6E62AC2E0CB009B5E9F /* DDArticleCVCell.swift in Sources */,
 				E3F2E2A92AB8BFDB00C92B58 /* UIColor+Extension.swift in Sources */,
 				E35413832AC03CFD002C757F /* DDFeedVM.swift in Sources */,
 			);

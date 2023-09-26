@@ -34,4 +34,6 @@ enum DDImageName: String {
     case bookmarkEmpty
     case share
     
+    case arrowRightGreen
+    
 }

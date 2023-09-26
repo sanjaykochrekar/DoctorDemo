@@ -39,6 +39,7 @@ class DDFeedViewController: UIViewController {
         feedUICollectionView.register(UINib(nibName: "DDLocationCVCell", bundle: nil), forCellWithReuseIdentifier: "DDLocationCVCell")
         feedUICollectionView.register(UINib(nibName: "DDPostTitleCVCell", bundle: nil), forCellWithReuseIdentifier: "DDPostTitleCVCell")
         feedUICollectionView.register(UINib(nibName: "DDPostImageCVCell", bundle: nil), forCellWithReuseIdentifier: "DDPostImageCVCell")
+        feedUICollectionView.register(UINib(nibName: "DDArticleCVCell", bundle: nil), forCellWithReuseIdentifier: "DDArticleCVCell")
     }
     
     
@@ -47,6 +48,8 @@ class DDFeedViewController: UIViewController {
             switch sectionIndex {
             case 0 :
                 return self?.postSection()
+            case 3:
+                return self?.articleSection()
             default:
                 return self?.postSection()
             }
@@ -63,12 +66,43 @@ class DDFeedViewController: UIViewController {
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(180))
         
         let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
-        group.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0)
+        group.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
         
         let section = NSCollectionLayoutSection(group: group)
-        section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 10, trailing: 0)
         
         return section
+    }
+    
+    func articleSection() -> NSCollectionLayoutSection {
+        // item
+        let item = NSCollectionLayoutItem(
+            layoutSize: NSCollectionLayoutSize(
+                widthDimension: .fractionalWidth(4/5),
+                heightDimension: .fractionalHeight(1)
+            )
+        )
+        item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 10)
+        
+        // group
+        let group = NSCollectionLayoutGroup.horizontal(
+            layoutSize: NSCollectionLayoutSize(
+                widthDimension: .fractionalWidth(4/5),
+                heightDimension: .estimated(140)
+            ),
+            subitem: item,
+            count: 1
+        )
+        group.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
+        
+        // section
+        let section = NSCollectionLayoutSection(group: group)
+        section.orthogonalScrollingBehavior = .continuous
+        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 10, bottom: 10, trailing: 10)
+        
+        // return
+        return section
+        
     }
     
 }
@@ -85,28 +119,33 @@ extension DDFeedViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if indexPath.row == 0 {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DDFeedPostHeaderCVCell", for: indexPath) as! DDFeedPostHeaderCVCell
-            return cell
-            
-        } else if indexPath.row == 1 {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DDPostTitleCVCell", for: indexPath) as! DDPostTitleCVCell
-            return cell
-          
-        } else if indexPath.row == 2 {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DDSeeMoreTextCVCell", for: indexPath) as! DDSeeMoreTextCVCell
-            cell.populate(DDPostTextDataModel(), indexPath: indexPath)
-            cell.delegate = self
-            return cell
-        } else if indexPath.row == 3 {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DDPostImageCVCell", for: indexPath) as! DDPostImageCVCell
-            return cell
-        } else if indexPath.row == 4 {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DDLocationCVCell", for: indexPath) as! DDLocationCVCell
+        if indexPath.section == 3 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DDArticleCVCell", for: indexPath) as! DDArticleCVCell
             return cell
         } else {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DDPostActionCVCell", for: indexPath) as! DDPostActionCVCell
-            return cell
+            if indexPath.row == 0 {
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DDFeedPostHeaderCVCell", for: indexPath) as! DDFeedPostHeaderCVCell
+                return cell
+                
+            } else if indexPath.row == 1 {
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DDPostTitleCVCell", for: indexPath) as! DDPostTitleCVCell
+                return cell
+                
+            } else if indexPath.row == 2 {
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DDSeeMoreTextCVCell", for: indexPath) as! DDSeeMoreTextCVCell
+                cell.populate(DDPostTextDataModel(), indexPath: indexPath)
+                cell.delegate = self
+                return cell
+            } else if indexPath.row == 3 {
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DDPostImageCVCell", for: indexPath) as! DDPostImageCVCell
+                return cell
+            } else if indexPath.row == 4 {
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DDLocationCVCell", for: indexPath) as! DDLocationCVCell
+                return cell
+            } else {
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DDPostActionCVCell", for: indexPath) as! DDPostActionCVCell
+                return cell
+            }
         }
     }
     
