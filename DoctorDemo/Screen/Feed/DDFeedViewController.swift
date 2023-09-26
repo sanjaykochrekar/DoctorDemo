@@ -11,7 +11,6 @@ import UIKit
 
 class DDFeedViewController: UIViewController {
    
-
     
     @IBOutlet weak var profileUIView: UIView!
     
@@ -38,6 +37,8 @@ class DDFeedViewController: UIViewController {
         feedUICollectionView.register(UINib(nibName: "DDSeeMoreTextCVCell", bundle: nil), forCellWithReuseIdentifier: "DDSeeMoreTextCVCell")
         feedUICollectionView.register(UINib(nibName: "DDPostActionCVCell", bundle: nil), forCellWithReuseIdentifier: "DDPostActionCVCell")
         feedUICollectionView.register(UINib(nibName: "DDLocationCVCell", bundle: nil), forCellWithReuseIdentifier: "DDLocationCVCell")
+        feedUICollectionView.register(UINib(nibName: "DDPostTitleCVCell", bundle: nil), forCellWithReuseIdentifier: "DDPostTitleCVCell")
+        feedUICollectionView.register(UINib(nibName: "DDPostImageCVCell", bundle: nil), forCellWithReuseIdentifier: "DDPostImageCVCell")
     }
     
     
@@ -89,18 +90,21 @@ extension DDFeedViewController: UICollectionViewDataSource {
             return cell
             
         } else if indexPath.row == 1 {
-            
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DDPostTitleCVCell", for: indexPath) as! DDPostTitleCVCell
+            return cell
+          
+        } else if indexPath.row == 2 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DDSeeMoreTextCVCell", for: indexPath) as! DDSeeMoreTextCVCell
             cell.populate(DDPostTextDataModel(), indexPath: indexPath)
             cell.delegate = self
             return cell
-          
-        } else if indexPath.row == 2 {
+        } else if indexPath.row == 3 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DDPostImageCVCell", for: indexPath) as! DDPostImageCVCell
+            return cell
+        } else if indexPath.row == 4 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DDLocationCVCell", for: indexPath) as! DDLocationCVCell
             return cell
         } else {
-           
-            
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DDPostActionCVCell", for: indexPath) as! DDPostActionCVCell
             return cell
         }
@@ -111,6 +115,9 @@ extension DDFeedViewController: UICollectionViewDataSource {
 
 extension DDFeedViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let vc = DDDemoController(settings: PageSettings())
+               presentBottomSheet(viewController: vc)
         print(indexPath.row)
     }
 }
@@ -124,20 +131,15 @@ extension DDFeedViewController: DDListViewDelegate {
 }
 
 
-extension DDFeedViewController {
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if scrollView.contentOffset.y > contentOffSet {
-            UIView.animate(withDuration: 0.5) { [weak self] in
-                self?.profileUIView.isHidden = true
-                //self?.headerViewHeightConstraint.constant = 0
-            }
-        } else if scrollView.contentOffset.y < contentOffSet {
-            UIView.animate(withDuration: 0.5) { [weak self] in
-                self?.profileUIView.isHidden = false
+#if DEBUG
+import SwiftUI
 
-//                self?.headerViewHeightConstraint.constant = 40
-            }
-        }
-        contentOffSet = scrollView.contentOffset.y
+
+@available(iOS 13, *)
+struct ProfileVCPreview: PreviewProvider {
+    static var previews: some View {
+        // Assuming your storyboard file name is "Main"
+        UIStoryboard(name: "TabScreen", bundle: nil).instantiateViewController(identifier: "DDFeedViewController").toPreview()
     }
 }
+#endif

@@ -28,7 +28,7 @@ class DDFeedVM {
     
     func addData() {
         let data1 = DDPostDataModel()
-        let post1 = DDFeedSectionDataModel(data: [data1, data1, data1, data1])
+        let post1 = DDFeedSectionDataModel(data: [data1, data1, data1, data1, data1, data1])
         data.append(post1)
         data.append(post1)
         data.append(post1)
