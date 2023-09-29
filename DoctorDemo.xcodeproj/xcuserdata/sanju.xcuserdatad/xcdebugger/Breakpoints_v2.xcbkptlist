@@ -40,7 +40,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "4576CB20-5F70-4DE5-8D1D-48A8556E9197"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DoctorDemo/Screen/Feed/Cell/DDSeeMoreTextCVCell/DDSeeMoreTextCVCell.swift"
@@ -49,22 +49,6 @@
             startingLineNumber = "56"
             endingLineNumber = "56"
             landmarkName = "tapLabel(gesture:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "6A9525FA-D31F-4E66-A5CD-1C25F9AE7322"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DoctorDemo/Screen/Feed/DDFeedVM.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
-            landmarkName = "addData()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

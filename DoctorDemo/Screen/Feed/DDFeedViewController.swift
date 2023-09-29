@@ -40,6 +40,7 @@ class DDFeedViewController: UIViewController {
         feedUICollectionView.register(UINib(nibName: "DDPostTitleCVCell", bundle: nil), forCellWithReuseIdentifier: "DDPostTitleCVCell")
         feedUICollectionView.register(UINib(nibName: "DDPostImageCVCell", bundle: nil), forCellWithReuseIdentifier: "DDPostImageCVCell")
         feedUICollectionView.register(UINib(nibName: "DDArticleCVCell", bundle: nil), forCellWithReuseIdentifier: "DDArticleCVCell")
+        feedUICollectionView.register(UINib(nibName: "DDPollPercentCVCell", bundle: nil), forCellWithReuseIdentifier: "DDPollPercentCVCell")
     }
     
     
@@ -140,6 +141,9 @@ extension DDFeedViewController: UICollectionViewDataSource {
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DDPostImageCVCell", for: indexPath) as! DDPostImageCVCell
                 return cell
             } else if indexPath.row == 4 {
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DDPollPercentCVCell", for: indexPath) as! DDPollPercentCVCell
+                return cell
+            } else if indexPath.row == 5 {
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DDLocationCVCell", for: indexPath) as! DDLocationCVCell
                 return cell
             } else {
