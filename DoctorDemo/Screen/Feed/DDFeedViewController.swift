@@ -25,7 +25,7 @@ class DDFeedViewController: UIViewController {
     private var oldContentOffset = CGPoint.zero
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+        
         setCompositionLayout()
         registerCell()
         vm.addData()

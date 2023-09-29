@@ -28,12 +28,12 @@ class DDFeedVM {
     
     func addData() {
         let data1 = DDPostDataModel()
-        let post1 = DDFeedSectionDataModel(data: [data1, data1, data1, data1, data1, data1])
+        let post1 = DDFeedSectionDataModel(data: [data1, data1, data1, data1, data1, data1, data1])
         data.append(post1)
         data.append(post1)
         data.append(post1)
         
-        for _ in 0...1000 {
+        for _ in 0...10 {
             data.append(post1)
         }
     }
