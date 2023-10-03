@@ -1,0 +1,41 @@
+[
+    {
+        "id": "abcd",
+        "category": "DIET",
+        "user": {
+            "name": "rohit.shetty12",
+            "profile_pic_url": "deom_profile",
+            "user_type": "Diagnosed recently"
+            
+        },
+        "my_reaction": "like",
+        "question": "What are the signs and symptoms of skin cancer?",
+        "description": "I've been facing a few possibble symptoms of skin cancer. I've googled the possibilities but i thought i'd ask the community inste...See More",
+        "location":{
+            "place": "nowhere",
+            "sub_place": "Marathahalli",
+            "city": "Bengaluru",
+            "country": "India"
+        },
+        "like_count": 24,
+        "comment_count": 12,
+        "is_bookmarked": true,
+        "reaction_count": 2,
+        "react_preview": [{
+                "profile_url":["deom_profile", "deom_profile", "deom_profile"],
+                "reaction": "need to think"
+        }],
+        "posted_date_and_time": "132143243",
+        "post_type": "Question",
+
+        "comments": [
+            {
+                "posted_by": "abcd",
+                "posted_on": "123244",
+                "description": "abcd",
+                "image_url": ["url", "url"],
+                "type": "answer"
+            }
+        ]
+    }
+]

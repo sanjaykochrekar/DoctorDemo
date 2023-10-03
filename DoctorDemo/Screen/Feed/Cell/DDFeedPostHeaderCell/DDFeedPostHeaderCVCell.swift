@@ -8,6 +8,7 @@
 import UIKit
 
 class DDFeedPostHeaderCVCell: UICollectionViewCell {
+    
     @IBOutlet weak var categoryUILabel: UILabel!
     @IBOutlet weak var lastPostedTimeUILabel: UILabel!
     @IBOutlet weak var avatarUIImageView: UIImageView!
@@ -21,7 +22,16 @@ class DDFeedPostHeaderCVCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
+}
+
+//MARK: DDListViewCell methods
+extension DDFeedPostHeaderCVCell: DDListViewCell {
+    
+    func populate(_ data: DDListViewCellDataModel, indexPath: IndexPath?) {
+        if let safeData = data as? DDPostHeaderDataModel {
+            
+        }
+    }
 }

@@ -49,8 +49,6 @@ class DDFeedViewController: UIViewController {
             switch sectionIndex {
             case 0 :
                 return self?.postSection()
-            case 3:
-                return self?.articleSection()
             default:
                 return self?.postSection()
             }
@@ -116,41 +114,14 @@ extension DDFeedViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return vm.data[section].data.count
+        return vm.data[section].celldata.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if indexPath.section == 3 {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DDArticleCVCell", for: indexPath) as! DDArticleCVCell
-            return cell
-        } else {
-            if indexPath.row == 0 {
-                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DDFeedPostHeaderCVCell", for: indexPath) as! DDFeedPostHeaderCVCell
-                return cell
-                
-            } else if indexPath.row == 1 {
-                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DDPostTitleCVCell", for: indexPath) as! DDPostTitleCVCell
-                return cell
-                
-            } else if indexPath.row == 2 {
-                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DDSeeMoreTextCVCell", for: indexPath) as! DDSeeMoreTextCVCell
-                cell.populate(DDPostTextDataModel(), indexPath: indexPath)
-                cell.delegate = self
-                return cell
-            } else if indexPath.row == 3 {
-                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DDPostImageCVCell", for: indexPath) as! DDPostImageCVCell
-                return cell
-            } else if indexPath.row == 4 {
-                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DDPollPercentCVCell", for: indexPath) as! DDPollPercentCVCell
-                return cell
-            } else if indexPath.row == 5 {
-                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DDLocationCVCell", for: indexPath) as! DDLocationCVCell
-                return cell
-            } else {
-                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DDPostActionCVCell", for: indexPath) as! DDPostActionCVCell
-                return cell
-            }
-        }
+        let cellData = vm.data[indexPath.section].celldata[indexPath.row]
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellData.identifier, for: indexPath)
+        
+        return cell
     }
     
 }

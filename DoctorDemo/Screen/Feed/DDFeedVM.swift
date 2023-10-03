@@ -6,36 +6,50 @@
 //
 
 
-protocol DDSectionDataModel {
-    var data: [DDListViewCellDataModel] { get set }
-}
-
-
-struct DDPostDataModel:DDListViewCellDataModel {
-    var identifier: String = "DDSeeMoreTextCVCell"
+struct DDPostDataModel {
+    var celldata: [DDListViewCellDataModel]
     
-}
-
-struct DDFeedSectionDataModel: DDSectionDataModel {
-    var data: [DDListViewCellDataModel] = []
+    init() {
+        celldata = []
+    }
     
+    init(celldata: [DDListViewCellDataModel]) {
+        self.celldata = celldata
+    }
+    
+    
+    mutating func append(_ element: DDListViewCellDataModel) {
+        celldata.append(element)
+    }
     
 }
 
 
 class DDFeedVM {
-    var data: [DDSectionDataModel] = []
+    var data: [DDPostDataModel] = []
     
     func addData() {
-        let data1 = DDPostDataModel()
-        let post1 = DDFeedSectionDataModel(data: [data1, data1, data1, data1, data1, data1, data1])
-        data.append(post1)
-        data.append(post1)
-        data.append(post1)
-        
-        for _ in 0...10 {
-            data.append(post1)
+        loadData()
+    }
+    
+    func loadData() {
+        if let d = DemoFunction.loadPost() {
+            let postinator = DDPostinator(data: d)
+            data = postinator.getFeedData()
         }
+        print("---------------------------------")
+        print(data)
+        print("---------------------------------")
+    }
+    
+    
+    func getFeedData() -> [DDPostDataModel] {
+        let postHeaderCell = DDPostHeaderDataModel(userName: "Sanju")
+        let postQuestionCell = DDPostTitleDataModel(title: "Once opon time in bengaluru")
+        let imageCell = DDPostImageDataModel()
+        let footerCell = DDPostFooterDataModel(reaction: 23, comments: 12, isBookMarked: false)
+        let post = DDPostDataModel(celldata: [postHeaderCell, postQuestionCell, imageCell, footerCell])
+        return [post, post, post, post]
     }
     
 }

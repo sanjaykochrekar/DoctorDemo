@@ -36,4 +36,6 @@ enum DDImageName: String {
     
     case arrowRightGreen
     
+    case location
+    
 }

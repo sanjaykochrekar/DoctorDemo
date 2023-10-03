@@ -13,6 +13,11 @@ protocol DDListViewCell {
 }
 
 extension DDListViewCell {
+    
+    func populate(_ data: DDListViewCellDataModel, indexPath: IndexPath?) {
+        
+    }
+    
 }
 
 

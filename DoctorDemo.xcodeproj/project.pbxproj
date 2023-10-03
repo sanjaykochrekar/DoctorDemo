@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E30F1E132AC1D2290096FD8C /* DDDemoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30F1E122AC1D2290096FD8C /* DDDemoController.swift */; };
+		E351B8882ACC5A6500592D38 /* DDEventCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E351B8862ACC5A6500592D38 /* DDEventCVCell.swift */; };
+		E351B8892ACC5A6500592D38 /* DDEventCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E351B8872ACC5A6500592D38 /* DDEventCVCell.xib */; };
 		E35413812AC0335B002C757F /* DDPostTextDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35413802AC0335B002C757F /* DDPostTextDataModel.swift */; };
 		E35413832AC03CFD002C757F /* DDFeedVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35413822AC03CFD002C757F /* DDFeedVM.swift */; };
 		E35413872AC04228002C757F /* DDPostActionCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35413852AC04228002C757F /* DDPostActionCVCell.swift */; };
@@ -58,12 +60,17 @@
 		E3F2E2C72ABA0AF300C92B58 /* DDListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F2E2C62ABA0AF300C92B58 /* DDListViewCell.swift */; };
 		E3F2E2C92ABA0B7D00C92B58 /* DDFabCellDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F2E2C82ABA0B7D00C92B58 /* DDFabCellDataModel.swift */; };
 		E3F2E2CB2ABA9C3000C92B58 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F2E2CA2ABA9C3000C92B58 /* UIView+Extension.swift */; };
+		E3F523C42AC7E14F00D4A2D5 /* DemoFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F523C32AC7E14F00D4A2D5 /* DemoFunction.swift */; };
+		E3F523C62AC7E1F700D4A2D5 /* demo_post_two.json in Resources */ = {isa = PBXBuildFile; fileRef = E3F523C52AC7E1F700D4A2D5 /* demo_post_two.json */; };
+		E3F523C82AC7E7AA00D4A2D5 /* DDPostinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F523C72AC7E7AA00D4A2D5 /* DDPostinator.swift */; };
 		E3F64F262ABF269600ADCB88 /* DDFeedPostHeaderCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F64F242ABF269600ADCB88 /* DDFeedPostHeaderCVCell.swift */; };
 		E3F64F272ABF269600ADCB88 /* DDFeedPostHeaderCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3F64F252ABF269600ADCB88 /* DDFeedPostHeaderCVCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E30F1E122AC1D2290096FD8C /* DDDemoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDDemoController.swift; sourceTree = "<group>"; };
+		E351B8862ACC5A6500592D38 /* DDEventCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDEventCVCell.swift; sourceTree = "<group>"; };
+		E351B8872ACC5A6500592D38 /* DDEventCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DDEventCVCell.xib; sourceTree = "<group>"; };
 		E35413802AC0335B002C757F /* DDPostTextDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDPostTextDataModel.swift; sourceTree = "<group>"; };
 		E35413822AC03CFD002C757F /* DDFeedVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDFeedVM.swift; sourceTree = "<group>"; };
 		E35413852AC04228002C757F /* DDPostActionCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDPostActionCVCell.swift; sourceTree = "<group>"; };
@@ -116,6 +123,9 @@
 		E3F2E2C62ABA0AF300C92B58 /* DDListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDListViewCell.swift; sourceTree = "<group>"; };
 		E3F2E2C82ABA0B7D00C92B58 /* DDFabCellDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDFabCellDataModel.swift; sourceTree = "<group>"; };
 		E3F2E2CA2ABA9C3000C92B58 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		E3F523C32AC7E14F00D4A2D5 /* DemoFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoFunction.swift; sourceTree = "<group>"; };
+		E3F523C52AC7E1F700D4A2D5 /* demo_post_two.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = demo_post_two.json; sourceTree = SOURCE_ROOT; };
+		E3F523C72AC7E7AA00D4A2D5 /* DDPostinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDPostinator.swift; sourceTree = "<group>"; };
 		E3F64F242ABF269600ADCB88 /* DDFeedPostHeaderCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDFeedPostHeaderCVCell.swift; sourceTree = "<group>"; };
 		E3F64F252ABF269600ADCB88 /* DDFeedPostHeaderCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DDFeedPostHeaderCVCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,10 +141,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E351B8852ACC5A3B00592D38 /* DDEventCVCell */ = {
+			isa = PBXGroup;
+			children = (
+				E351B8862ACC5A6500592D38 /* DDEventCVCell.swift */,
+				E351B8872ACC5A6500592D38 /* DDEventCVCell.xib */,
+			);
+			path = DDEventCVCell;
+			sourceTree = "<group>";
+		};
 		E354137F2AC03328002C757F /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
 				E35413802AC0335B002C757F /* DDPostTextDataModel.swift */,
+				E3F523C72AC7E7AA00D4A2D5 /* DDPostinator.swift */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -228,6 +248,7 @@
 		E3D465872ABFE80900828B72 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				E3F523C52AC7E1F700D4A2D5 /* demo_post_two.json */,
 				E3F2E2CA2ABA9C3000C92B58 /* UIView+Extension.swift */,
 				E3D465882ABFE82500828B72 /* UITapGestureRecognizer+Extension.swift */,
 				E360A6D72AC2BA2C009B5E9F /* UIViewController+Extension.swift */,
@@ -372,6 +393,7 @@
 			children = (
 				E3D465872ABFE80900828B72 /* Extension */,
 				E3F2E2C62ABA0AF300C92B58 /* DDListViewCell.swift */,
+				E3F523C32AC7E14F00D4A2D5 /* DemoFunction.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -379,6 +401,7 @@
 		E3F64F222ABF265800ADCB88 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				E351B8852ACC5A3B00592D38 /* DDEventCVCell */,
 				E3F64F232ABF265E00ADCB88 /* DDFeedPostHeaderCell */,
 				E360A6D92AC2BAD1009B5E9F /* DDPostTitleCVCell */,
 				E3D4658A2ABFE93300828B72 /* DDSeeMoreTextCVCell */,
@@ -461,6 +484,7 @@
 				E37DD66E2AB8B8340054F2F9 /* LaunchScreen.storyboard in Resources */,
 				E3F2E29A2AB8BEB300C92B58 /* Inter-Bold.ttf in Resources */,
 				E37DD66B2AB8B8340054F2F9 /* Assets.xcassets in Resources */,
+				E351B8892ACC5A6500592D38 /* DDEventCVCell.xib in Resources */,
 				E3F2E29E2AB8BEB300C92B58 /* Inter-SemiBold.ttf in Resources */,
 				E3F2E29C2AB8BEB300C92B58 /* Inter-ExtraLight.ttf in Resources */,
 				E37DD6692AB8B8330054F2F9 /* Main.storyboard in Resources */,
@@ -479,6 +503,7 @@
 				E360A6E72AC2E0CB009B5E9F /* DDArticleCVCell.xib in Resources */,
 				E3F2E2A12AB8BEB300C92B58 /* Inter-Light.ttf in Resources */,
 				E3F2E29B2AB8BEB300C92B58 /* Inter-ExtraBold.ttf in Resources */,
+				E3F523C62AC7E1F700D4A2D5 /* demo_post_two.json in Resources */,
 				E3F64F272ABF269600ADCB88 /* DDFeedPostHeaderCVCell.xib in Resources */,
 				E360A6DD2AC2BAEF009B5E9F /* DDPostTitleCVCell.xib in Resources */,
 			);
@@ -495,10 +520,12 @@
 				E3F2E2C72ABA0AF300C92B58 /* DDListViewCell.swift in Sources */,
 				E3F2E2CB2ABA9C3000C92B58 /* UIView+Extension.swift in Sources */,
 				E37DD6662AB8B8330054F2F9 /* DDTabViewController.swift in Sources */,
+				E351B8882ACC5A6500592D38 /* DDEventCVCell.swift in Sources */,
 				E3F2E2C22ABA0A6600C92B58 /* FabTableViewCell.swift in Sources */,
 				E3F2E2C92ABA0B7D00C92B58 /* DDFabCellDataModel.swift in Sources */,
 				E35413812AC0335B002C757F /* DDPostTextDataModel.swift in Sources */,
 				E3F2E2BE2AB97AB000C92B58 /* DDServiceViewController.swift in Sources */,
+				E3F523C82AC7E7AA00D4A2D5 /* DDPostinator.swift in Sources */,
 				E3F64F262ABF269600ADCB88 /* DDFeedPostHeaderCVCell.swift in Sources */,
 				E3F2E2B52AB979C400C92B58 /* DDFeedViewController.swift in Sources */,
 				E3D465892ABFE82500828B72 /* UITapGestureRecognizer+Extension.swift in Sources */,
@@ -512,6 +539,7 @@
 				E360A6DC2AC2BAEF009B5E9F /* DDPostTitleCVCell.swift in Sources */,
 				E3F2E2AF2AB8C1CE00C92B58 /* Image+Extension.swift in Sources */,
 				E3D4658D2ABFE96900828B72 /* DDSeeMoreTextCVCell.swift in Sources */,
+				E3F523C42AC7E14F00D4A2D5 /* DemoFunction.swift in Sources */,
 				E360A6EB2AC31D13009B5E9F /* DDPollPercentCVCell.swift in Sources */,
 				E3B4884F2AC0AC4200D14839 /* DDLocationCVCell.swift in Sources */,
 				E37DD6622AB8B8330054F2F9 /* AppDelegate.swift in Sources */,
