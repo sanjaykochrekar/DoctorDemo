@@ -10,6 +10,8 @@
 		E30F1E132AC1D2290096FD8C /* DDDemoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30F1E122AC1D2290096FD8C /* DDDemoController.swift */; };
 		E351B8882ACC5A6500592D38 /* DDEventCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E351B8862ACC5A6500592D38 /* DDEventCVCell.swift */; };
 		E351B8892ACC5A6500592D38 /* DDEventCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E351B8872ACC5A6500592D38 /* DDEventCVCell.xib */; };
+		E351B88D2ACC5E5000592D38 /* DDYesOrNoCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E351B88B2ACC5E5000592D38 /* DDYesOrNoCVCell.swift */; };
+		E351B88E2ACC5E5000592D38 /* DDYesOrNoCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E351B88C2ACC5E5000592D38 /* DDYesOrNoCVCell.xib */; };
 		E35413812AC0335B002C757F /* DDPostTextDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35413802AC0335B002C757F /* DDPostTextDataModel.swift */; };
 		E35413832AC03CFD002C757F /* DDFeedVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35413822AC03CFD002C757F /* DDFeedVM.swift */; };
 		E35413872AC04228002C757F /* DDPostActionCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35413852AC04228002C757F /* DDPostActionCVCell.swift */; };
@@ -71,6 +73,8 @@
 		E30F1E122AC1D2290096FD8C /* DDDemoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDDemoController.swift; sourceTree = "<group>"; };
 		E351B8862ACC5A6500592D38 /* DDEventCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDEventCVCell.swift; sourceTree = "<group>"; };
 		E351B8872ACC5A6500592D38 /* DDEventCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DDEventCVCell.xib; sourceTree = "<group>"; };
+		E351B88B2ACC5E5000592D38 /* DDYesOrNoCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDYesOrNoCVCell.swift; sourceTree = "<group>"; };
+		E351B88C2ACC5E5000592D38 /* DDYesOrNoCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DDYesOrNoCVCell.xib; sourceTree = "<group>"; };
 		E35413802AC0335B002C757F /* DDPostTextDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDPostTextDataModel.swift; sourceTree = "<group>"; };
 		E35413822AC03CFD002C757F /* DDFeedVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDFeedVM.swift; sourceTree = "<group>"; };
 		E35413852AC04228002C757F /* DDPostActionCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDPostActionCVCell.swift; sourceTree = "<group>"; };
@@ -148,6 +152,15 @@
 				E351B8872ACC5A6500592D38 /* DDEventCVCell.xib */,
 			);
 			path = DDEventCVCell;
+			sourceTree = "<group>";
+		};
+		E351B88A2ACC5E3700592D38 /* DDYesOrNoCVCell */ = {
+			isa = PBXGroup;
+			children = (
+				E351B88B2ACC5E5000592D38 /* DDYesOrNoCVCell.swift */,
+				E351B88C2ACC5E5000592D38 /* DDYesOrNoCVCell.xib */,
+			);
+			path = DDYesOrNoCVCell;
 			sourceTree = "<group>";
 		};
 		E354137F2AC03328002C757F /* DataModel */ = {
@@ -401,6 +414,7 @@
 		E3F64F222ABF265800ADCB88 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				E351B88A2ACC5E3700592D38 /* DDYesOrNoCVCell */,
 				E351B8852ACC5A3B00592D38 /* DDEventCVCell */,
 				E3F64F232ABF265E00ADCB88 /* DDFeedPostHeaderCell */,
 				E360A6D92AC2BAD1009B5E9F /* DDPostTitleCVCell */,
@@ -499,6 +513,7 @@
 				E3F2E2A22AB8BEB300C92B58 /* Inter-Medium.ttf in Resources */,
 				E35413882AC04228002C757F /* DDPostActionCVCell.xib in Resources */,
 				E3F2E2A72AB8BFAB00C92B58 /* Theme.xcassets in Resources */,
+				E351B88E2ACC5E5000592D38 /* DDYesOrNoCVCell.xib in Resources */,
 				E3D4658E2ABFE96900828B72 /* DDSeeMoreTextCVCell.xib in Resources */,
 				E360A6E72AC2E0CB009B5E9F /* DDArticleCVCell.xib in Resources */,
 				E3F2E2A12AB8BEB300C92B58 /* Inter-Light.ttf in Resources */,
@@ -520,6 +535,7 @@
 				E3F2E2C72ABA0AF300C92B58 /* DDListViewCell.swift in Sources */,
 				E3F2E2CB2ABA9C3000C92B58 /* UIView+Extension.swift in Sources */,
 				E37DD6662AB8B8330054F2F9 /* DDTabViewController.swift in Sources */,
+				E351B88D2ACC5E5000592D38 /* DDYesOrNoCVCell.swift in Sources */,
 				E351B8882ACC5A6500592D38 /* DDEventCVCell.swift in Sources */,
 				E3F2E2C22ABA0A6600C92B58 /* FabTableViewCell.swift in Sources */,
 				E3F2E2C92ABA0B7D00C92B58 /* DDFabCellDataModel.swift in Sources */,

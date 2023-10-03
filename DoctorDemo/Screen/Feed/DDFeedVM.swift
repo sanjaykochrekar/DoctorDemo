@@ -37,9 +37,6 @@ class DDFeedVM {
             let postinator = DDPostinator(data: d)
             data = postinator.getFeedData()
         }
-        print("---------------------------------")
-        print(data)
-        print("---------------------------------")
     }
     
     
